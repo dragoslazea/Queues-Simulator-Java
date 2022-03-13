@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+title Cazurile de utilizare ale aplicației
+actor Utilizatorul as user
+rectangle "Simulator de cozi" {
+    (Simularea aranjării\nclienților în cozi) as (sim)
+    (Resetarea simulatorului) as (res)
+    (Vizualizarea rezultatele\nsimulării) as (rezultate)
+    (Vizualizarea simularea în timp real) as (timp)
+
+}
+(sim) ..> (rezultate): <implică>
+(sim) ..> (timp): <implică>
+user --> (sim)
+user --> (res)
+@enduml
